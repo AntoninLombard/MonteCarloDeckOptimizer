@@ -1,0 +1,14 @@
+C:\Users\ELE64f86f441b141\Desktop\MonteCarlo\MonteCarlo\bin\Debug\net8.0\MonteCarlo.exe
+C:\Users\ELE64f86f441b141\Desktop\MonteCarlo\MonteCarlo\bin\Debug\net8.0\MonteCarlo.deps.json
+C:\Users\ELE64f86f441b141\Desktop\MonteCarlo\MonteCarlo\bin\Debug\net8.0\MonteCarlo.runtimeconfig.json
+C:\Users\ELE64f86f441b141\Desktop\MonteCarlo\MonteCarlo\bin\Debug\net8.0\MonteCarlo.dll
+C:\Users\ELE64f86f441b141\Desktop\MonteCarlo\MonteCarlo\bin\Debug\net8.0\MonteCarlo.pdb
+C:\Users\ELE64f86f441b141\Desktop\MonteCarlo\MonteCarlo\obj\Debug\net8.0\MonteCarlo.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ELE64f86f441b141\Desktop\MonteCarlo\MonteCarlo\obj\Debug\net8.0\MonteCarlo.AssemblyInfoInputs.cache
+C:\Users\ELE64f86f441b141\Desktop\MonteCarlo\MonteCarlo\obj\Debug\net8.0\MonteCarlo.AssemblyInfo.cs
+C:\Users\ELE64f86f441b141\Desktop\MonteCarlo\MonteCarlo\obj\Debug\net8.0\MonteCarlo.csproj.CoreCompileInputs.cache
+C:\Users\ELE64f86f441b141\Desktop\MonteCarlo\MonteCarlo\obj\Debug\net8.0\MonteCarlo.dll
+C:\Users\ELE64f86f441b141\Desktop\MonteCarlo\MonteCarlo\obj\Debug\net8.0\refint\MonteCarlo.dll
+C:\Users\ELE64f86f441b141\Desktop\MonteCarlo\MonteCarlo\obj\Debug\net8.0\MonteCarlo.pdb
+C:\Users\ELE64f86f441b141\Desktop\MonteCarlo\MonteCarlo\obj\Debug\net8.0\MonteCarlo.genruntimeconfig.cache
+C:\Users\ELE64f86f441b141\Desktop\MonteCarlo\MonteCarlo\obj\Debug\net8.0\ref\MonteCarlo.dll
