@@ -12,3 +12,4 @@ C:\Users\ELE64f86f441b141\Desktop\MonteCarlo\MonteCarlo\obj\Debug\net8.0\refint\
 C:\Users\ELE64f86f441b141\Desktop\MonteCarlo\MonteCarlo\obj\Debug\net8.0\MonteCarlo.pdb
 C:\Users\ELE64f86f441b141\Desktop\MonteCarlo\MonteCarlo\obj\Debug\net8.0\MonteCarlo.genruntimeconfig.cache
 C:\Users\ELE64f86f441b141\Desktop\MonteCarlo\MonteCarlo\obj\Debug\net8.0\ref\MonteCarlo.dll
+C:\Users\ELE64f86f441b141\Desktop\MonteCarlo\MonteCarlo\obj\Debug\net8.0\MonteCarlo.sourcelink.json

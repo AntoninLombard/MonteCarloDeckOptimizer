@@ -4,7 +4,7 @@ public class Card
 {
     public int manaCost
     {
-        get { return (attack + defence +1)/2; }
+        get { return (int)MathF.Ceiling((float)(attack + defence)/2f + (hasTaunt? 1.5f :0f) + (hasDistortion? 1f :0f) + (hasTrample? 1f :0f) + (hasFirstStrike? 1f :0f)); }
         private set {}
     }
 
@@ -23,10 +23,14 @@ public class Card
     {
         this.attack = attack;
         this.defence = defence;
+        this.hasTaunt = hasTaunt;
+        this.hasTrample = hasTrample;
+        this.hasFirstStrike = hasFirstStrike;
+        this.hasDistortion = hasDistortion;
     }
 
     public override string ToString()
     {
-        return "{\n\"Cost\":" + manaCost + ",\n\"Attack\":" +attack +",\n\"Defence\":" + defence +",\n\"HasTaunt\":"+ hasTaunt +",\n\"HasTrample\":"+ hasTrample +",\n\"HasDistortion\":"+ hasDistortion +",\n\"HasFirstStrike\":"+ hasFirstStrike +"}";
+        return "{\n\"Cost\":" + manaCost + ",\n\"Attack\":" +attack +",\n\"Defense\":" + defence +",\n\"HasTaunt\":"+ (hasTaunt? "true":"false") +",\n\"HasTrample\":"+ (hasTrample? "true":"false") +",\n\"HasDistortion\":"+ (hasDistortion? "true":"false") +",\n\"HasFirstStrike\":"+ (hasFirstStrike? "true":"false") +"\n}";
     }
 }

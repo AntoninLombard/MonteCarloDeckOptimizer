@@ -7,7 +7,7 @@ public class Player
     public int manaMax;
     public Deck deck;
     public PriorityQueue<Card,int> hand { get; private set; } = new PriorityQueue<Card,int>();
-    static private int maxLife = 20;
+    static private int maxLife = Parameters.maxPlayerLife;
 
     
     public List<Card> PlayBest()
@@ -46,6 +46,14 @@ public class Player
             return;
         }
         hand.Enqueue(card,-card.manaCost);
+    }
+
+    public void DrawMutlipleCards(int nbCards)
+    {
+        for (int i = 0; i < nbCards; i++)
+        {
+            DrawCard();
+        }
     }
 
     public List<Card> PlayTurn()
