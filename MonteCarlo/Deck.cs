@@ -73,4 +73,15 @@ public class Deck
 
         return new Deck(newCards);
     }
+
+
+    public void ToCSV(StreamWriter writer)
+    {
+        writer.WriteLine("ManaCost,Attack,Defence,Taunt,Trample,Distortion,FirstStrike");
+        foreach(var card in this.cards)
+        {
+            card.ToCSV(writer);
+            writer.WriteLineAsync();
+        }
+    }
 }

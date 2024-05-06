@@ -33,4 +33,9 @@ public class Card
     {
         return "{\n\"Cost\":" + manaCost + ",\n\"Attack\":" +attack +",\n\"Defense\":" + defence +",\n\"HasTaunt\":"+ (hasTaunt? "true":"false") +",\n\"HasTrample\":"+ (hasTrample? "true":"false") +",\n\"HasDistortion\":"+ (hasDistortion? "true":"false") +",\n\"HasFirstStrike\":"+ (hasFirstStrike? "true":"false") +"\n}";
     }
+
+    public void ToCSV(StreamWriter writer)
+    {
+        writer.WriteAsync("" +manaCost + ',' + attack + ',' + defence + ',' + (hasTaunt ? 1 : 0) + ',' + (hasTrample ? 1 : 0) + ',' + (hasDistortion ? 1 : 0) + ',' + (hasFirstStrike ? 1 : 0));
+    }
 }

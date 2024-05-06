@@ -5,7 +5,7 @@ public class Player
     public int life { get; private set; }
     public int mana { get; private set; }
     public int manaMax;
-    public Deck deck;
+    public Deck? deck;
     public PriorityQueue<Card,int> hand { get; private set; } = new PriorityQueue<Card,int>();
     static private int maxLife = Parameters.maxPlayerLife;
 

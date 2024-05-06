@@ -14,17 +14,25 @@ public class DeckOptimizer
     }
     public void OptimizeDeck()
     {
+        StreamWriter sw;
         Deck deck0 = setList.GetRandomDeck();
         Deck deck1 = setList.GetRandomDeck();
         Deck deck2 = setList.GetRandomDeck();
         Deck deck3 = setList.GetRandomDeck();
         Deck deck4 = setList.GetRandomDeck();
-        
+
+        Statistics.Reset();
         Trainning(deck0);
+        sw = new StreamWriter(Parameters.winrate_CSV_path + Parameters.winrate_CSV_filename + "1" + ".csv");
+        Statistics.ToCSV(sw);
+
         Trainning(deck1);
         Trainning(deck2);
         Trainning(deck3);
         Trainning(deck4);
+
+        sw = new StreamWriter(Parameters.deck_CSV_path + Parameters.deck_CSV_filename + "1" + ".csv");
+        deck0.ToCSV(sw);
 
         Deck temp1 = deck1;
         Deck temp2 = deck2;
@@ -33,15 +41,28 @@ public class DeckOptimizer
         deck3 = Deck.Fuse(temp2, deck3);
         deck4 = Deck.Fuse(temp1, deck4);
         
+        Statistics.Reset();
         Trainning(deck0,deck1,deck2,deck3, deck4);
+        sw = new StreamWriter(Parameters.winrate_CSV_path + Parameters.winrate_CSV_filename + "1" + ".csv");
+        Statistics.ToCSV(sw);
+
+
+        sw = new StreamWriter(Parameters.deck_CSV_path + Parameters.deck_CSV_filename + "2" + ".csv");
+        deck0.ToCSV(sw);
         setList.OptimiseSetList();
         deck0 = setList.GetRandomDeck();
         Console.WriteLine("==========================================================================================================");
+        Statistics.Reset();
         Trainning(deck0);
+        sw = new StreamWriter(Parameters.winrate_CSV_path + Parameters.winrate_CSV_filename + "1" + ".csv");
+        Statistics.ToCSV(sw);
         Trainning(deck1);
         Trainning(deck2);
         Trainning(deck3);
         Trainning(deck4);
+        sw = new StreamWriter(Parameters.deck_CSV_path + Parameters.deck_CSV_filename + "3" + ".csv");
+        deck0.ToCSV(sw);
+
 
         temp1 = deck1;
         temp2 = deck2;
@@ -49,8 +70,15 @@ public class DeckOptimizer
         deck2 = Deck.Fuse(temp1, deck3);
         deck3 = Deck.Fuse(temp2, deck3);
         deck4 = Deck.Fuse(temp1, deck4);
-        
+
+        Statistics.Reset();
         Trainning(deck0,deck1,deck2,deck3, deck4);
+        Statistics.Reset();
+        sw = new StreamWriter(Parameters.winrate_CSV_path + Parameters.winrate_CSV_filename + "1" + ".csv");
+        Statistics.ToCSV(sw);
+        sw = new StreamWriter(Parameters.deck_CSV_path + Parameters.deck_CSV_filename + "4" + ".csv");
+        deck0.ToCSV(sw);
+        sw.Close();
     }
 
 
@@ -98,6 +126,7 @@ public class DeckOptimizer
         
         initWinRate = (game1.player1_winrate + game2.player1_winrate + game3.player1_winrate + game4.player1_winrate) / Parameters.nb_of_threads;
         currentWinRate = initWinRate;
+        Statistics.AddValue(currentWinRate);
         Log.Println("Initial win rate:" + initWinRate,true);
         Log.Println("Player 1 wins:" + (game1.player1_wins + game2.player1_wins + game3.player1_wins + game4.player1_wins),true);
 
@@ -114,7 +143,7 @@ public class DeckOptimizer
                 do
                 {
                     newCard = setList.GetRandomCard();
-                } while (deck0.cards.Count(x => x == newCard) < 2);
+                } while (deck0.cards.Count(x => x == newCard) >= 2);
 
 
                 deck0.cards.Add(newCard);
@@ -157,6 +186,7 @@ public class DeckOptimizer
                     setList.UpdateCardImpact(card, false);
                     setList.UpdateCardImpact(newCard, true);
                 }
+                Statistics.AddValue(currentWinRate);
 
             }
 

@@ -71,5 +71,14 @@ public class SetList
         cards = bestCards.Keys.ToList().GetRange(0,Parameters.nbOptimizedCards);
     }
 
+    public void ToCSV(StreamWriter writer)
+    {
+        foreach (var card in cardImpact)
+        {
+            card.Key.ToCSV(writer);
+            writer.WriteLineAsync("," + card.Value);
+        }
+    }
+
 
 }
