@@ -36,6 +36,6 @@ public class Card
 
     public void ToCSV(StreamWriter writer)
     {
-        writer.WriteAsync("" +manaCost + ',' + attack + ',' + defence + ',' + (hasTaunt ? 1 : 0) + ',' + (hasTrample ? 1 : 0) + ',' + (hasDistortion ? 1 : 0) + ',' + (hasFirstStrike ? 1 : 0));
+        writer.Write("" +manaCost + ',' + attack + ',' + defence + ',' + (hasTaunt ? 1 : 0) + ',' + (hasTrample ? 1 : 0) + ',' + (hasDistortion ? 1 : 0) + ',' + (hasFirstStrike ? 1 : 0));
     }
 }

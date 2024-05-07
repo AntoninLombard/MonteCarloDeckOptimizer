@@ -81,7 +81,7 @@ public class Deck
         foreach(var card in this.cards)
         {
             card.ToCSV(writer);
-            writer.WriteLineAsync();
+            writer.WriteLine();
         }
     }
 }

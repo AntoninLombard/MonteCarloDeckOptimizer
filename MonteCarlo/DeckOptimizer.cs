@@ -25,6 +25,7 @@ public class DeckOptimizer
         Trainning(deck0);
         sw = new StreamWriter(Parameters.winrate_CSV_path + Parameters.winrate_CSV_filename + "1" + ".csv");
         Statistics.ToCSV(sw);
+        sw.Close();
 
         Trainning(deck1);
         Trainning(deck2);
@@ -33,7 +34,8 @@ public class DeckOptimizer
 
         sw = new StreamWriter(Parameters.deck_CSV_path + Parameters.deck_CSV_filename + "1" + ".csv");
         deck0.ToCSV(sw);
-
+        sw.Close();
+        
         Deck temp1 = deck1;
         Deck temp2 = deck2;
         deck1 = Deck.Fuse(deck2, deck4);
@@ -43,25 +45,34 @@ public class DeckOptimizer
         
         Statistics.Reset();
         Trainning(deck0,deck1,deck2,deck3, deck4);
-        sw = new StreamWriter(Parameters.winrate_CSV_path + Parameters.winrate_CSV_filename + "1" + ".csv");
-        Statistics.ToCSV(sw);
+        sw = new StreamWriter(Parameters.winrate_CSV_path + Parameters.winrate_CSV_filename + "2" + ".csv");
+        Statistics.ToCSV(sw);   
+        sw.Close();
 
 
         sw = new StreamWriter(Parameters.deck_CSV_path + Parameters.deck_CSV_filename + "2" + ".csv");
         deck0.ToCSV(sw);
+        sw.Close();
+        
         setList.OptimiseSetList();
         deck0 = setList.GetRandomDeck();
+        deck1 = setList.GetRandomDeck();
+        deck2 = setList.GetRandomDeck();
+        deck3 = setList.GetRandomDeck();
+        deck4 = setList.GetRandomDeck();
         Console.WriteLine("==========================================================================================================");
         Statistics.Reset();
         Trainning(deck0);
-        sw = new StreamWriter(Parameters.winrate_CSV_path + Parameters.winrate_CSV_filename + "1" + ".csv");
+        sw = new StreamWriter(Parameters.winrate_CSV_path + Parameters.winrate_CSV_filename + "3" + ".csv");
         Statistics.ToCSV(sw);
+        sw.Close();
         Trainning(deck1);
         Trainning(deck2);
         Trainning(deck3);
         Trainning(deck4);
         sw = new StreamWriter(Parameters.deck_CSV_path + Parameters.deck_CSV_filename + "3" + ".csv");
         deck0.ToCSV(sw);
+        sw.Close();
 
 
         temp1 = deck1;
@@ -73,9 +84,9 @@ public class DeckOptimizer
 
         Statistics.Reset();
         Trainning(deck0,deck1,deck2,deck3, deck4);
-        Statistics.Reset();
-        sw = new StreamWriter(Parameters.winrate_CSV_path + Parameters.winrate_CSV_filename + "1" + ".csv");
+        sw = new StreamWriter(Parameters.winrate_CSV_path + Parameters.winrate_CSV_filename + "4" + ".csv");
         Statistics.ToCSV(sw);
+        sw.Close();
         sw = new StreamWriter(Parameters.deck_CSV_path + Parameters.deck_CSV_filename + "4" + ".csv");
         deck0.ToCSV(sw);
         sw.Close();
