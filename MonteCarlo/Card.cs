@@ -10,8 +10,6 @@ public class Card
 
     public int attack { get; private set; }
     public int defence { get; private set; }
-
-    
     public bool hasTaunt { get; private set; }
     public bool hasTrample { get; private set; }
     public bool hasDistortion { get; private set; }

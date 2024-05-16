@@ -13,21 +13,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ELE64f86f441b141\\Desktop\\MonteCarlo\\MonteCarlo\\MonteCarlo.csproj",
+      "projectUniqueName": "C:\\Users\\ELE64f86f441b141\\MonteCarloDeckOptimizer\\MonteCarlo\\MonteCarlo.csproj",
       "projectName": "MonteCarlo",
-      "projectPath": "C:\\Users\\ELE64f86f441b141\\Desktop\\MonteCarlo\\MonteCarlo\\MonteCarlo.csproj",
+      "projectPath": "C:\\Users\\ELE64f86f441b141\\MonteCarloDeckOptimizer\\MonteCarlo\\MonteCarlo.csproj",
       "packagesPath": "C:\\Users\\ELE64f86f441b141\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ELE64f86f441b141\\Desktop\\MonteCarlo\\MonteCarlo\\obj\\",
+      "outputPath": "C:\\Users\\ELE64f86f441b141\\MonteCarloDeckOptimizer\\MonteCarlo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ELE64f86f441b141\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\ELE64f86f441b141\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -40,11 +38,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -66,7 +59,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\ELE64f86f441b141\\.dotnet\\sdk\\8.0.203/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

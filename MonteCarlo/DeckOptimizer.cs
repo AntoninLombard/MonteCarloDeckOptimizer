@@ -55,6 +55,9 @@ public class DeckOptimizer
         sw.Close();
         
         setList.OptimiseSetList();
+        sw = new StreamWriter(Parameters.setlist_CSV_path + Parameters.setlist_CSV_filename + ".csv");
+        setList.ToCSV(sw);
+        sw.Close();
         deck0 = setList.GetRandomDeck();
         deck1 = setList.GetRandomDeck();
         deck2 = setList.GetRandomDeck();

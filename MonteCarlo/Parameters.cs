@@ -26,4 +26,6 @@ public static class Parameters
     public static string winrate_CSV_filename = "winrates";
     public static string deck_CSV_path = "./";
     public static string deck_CSV_filename = "deck";
+    public static string setlist_CSV_path = "./";
+    public static string setlist_CSV_filename = "setlist";
 }

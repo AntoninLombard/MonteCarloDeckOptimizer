@@ -76,7 +76,7 @@ public class SetList
         foreach (var card in cardImpact)
         {
             card.Key.ToCSV(writer);
-            writer.WriteLineAsync("," + card.Value);
+            writer.WriteLine("," + card.Value);
         }
     }
 

@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MonteCarlo
-build_property.ProjectDir = C:\Users\ELE64f86f441b141\Desktop\MonteCarlo\MonteCarlo\
+build_property.ProjectDir = C:\Users\ELE64f86f441b141\MonteCarloDeckOptimizer\MonteCarlo\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
